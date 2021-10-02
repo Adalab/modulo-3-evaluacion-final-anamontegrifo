@@ -4,7 +4,7 @@ import callToApi from '../services/api';
 import Header from './Header';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
-import Footer from './Fotter';
+import Footer from './Footer';
 
 function App() {
 	const [characters, setCharacters] = useState([]);
@@ -35,11 +35,14 @@ function App() {
 
 	console.log(characters);
 	return (
-		<div>
+		<div className="body">
 			<Header />
-			<Filters searchName={searchName} handleSearch={handleSearch} />
-			<CharacterList characters={filteredCharacters} />
-			<Footer />
+
+			<section id="list" className="main">
+				<Filters searchName={searchName} handleSearch={handleSearch} />
+				<CharacterList characters={filteredCharacters} />
+				<Footer />
+			</section>
 		</div>
 	);
 }

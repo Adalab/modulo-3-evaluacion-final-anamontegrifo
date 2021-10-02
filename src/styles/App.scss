@@ -1,1 +1,16 @@
+@import 'core/reset';
+@import 'core/variables';
 
+body {
+font-family: $regular;	
+display: flex;
+flex-direction: column;
+
+
+}
+.main {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
+	background-color: $orange;
+}
