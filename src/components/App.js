@@ -10,6 +10,16 @@ function App() {
 	const [characters, setCharacters] = useState([]);
 	const [searchName, setSearchName] = useState('');
 
+	characters.sort(function (a, b) {
+		if (a.name > b.name) {
+			return 1;
+		}
+		if (a.name < b.name) {
+			return -1;
+		}
+		return 0;
+	});
+
 	useEffect(() => {
 		callToApi().then((response) => {
 			setCharacters(response);

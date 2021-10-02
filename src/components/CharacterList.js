@@ -1,14 +1,19 @@
 import CharacterCard from './CharacterCard';
+import CharacterNotFound from './CharacterNotFound';
 
 const CharacterList = (props) => {
 	const renderCharacters = () => {
-		return props.characters.map((each) => {
-			return (
-				<li key={each.id} className="">
-					<CharacterCard each={each} />
-				</li>
-			);
-		});
+		if (props.characters.length === 0) {
+			return <CharacterNotFound />;
+		} else {
+			return props.characters.map((each) => {
+				return (
+					<li key={each.id} className="">
+						<CharacterCard each={each} />
+					</li>
+				);
+			});
+		}
 	};
 
 	return (
