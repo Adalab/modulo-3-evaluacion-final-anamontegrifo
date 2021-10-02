@@ -1,24 +1,16 @@
 import '../styles/App.scss';
 import { useEffect, useState } from 'react';
+import { Link, Route, Switch, useRouteMatch } from 'react-router-dom';
 import callToApi from '../services/api';
-import Header from './Header';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
-import Footer from './Footer';
+import CharacterDetail from './CharacterDetail';
+import Header from './Header';
+import Prueba from './Prueba';
 
 function App() {
 	const [characters, setCharacters] = useState([]);
 	const [searchName, setSearchName] = useState('');
-
-	characters.sort(function (a, b) {
-		if (a.name > b.name) {
-			return 1;
-		}
-		if (a.name < b.name) {
-			return -1;
-		}
-		return 0;
-	});
 
 	useEffect(() => {
 		callToApi().then((response) => {
@@ -29,20 +21,47 @@ function App() {
 	const handleSearch = (event) => {
 		setSearchName(event.currentTarget.value);
 	};
-	const filteredCharacters = characters.filter((each) =>
-		each.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
-	);
+	const filteredCharacters = characters
+		.sort(function (a, b) {
+			if (a.name > b.name) {
+				return 1;
+			}
+			if (a.name < b.name) {
+				return -1;
+			}
+			return 0;
+		})
+
+		.filter((each) =>
+			each.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
+		);
+
+	const routeData = useRouteMatch('/character/:id');
+	console.log(routeData);
+	const characterId = routeData !== null ? parseInt(routeData.params.id) : '';
+
+	const selectedCharacter = characters.find((item) => item.id === characterId);
+	console.log(selectedCharacter);
 
 	return (
-		<div className="body">
+		<>
 			<Header />
+			<main className="main">
+				<Switch>
+					<Route exact patch="/">
+						<Filters searchName={searchName} handleSearch={handleSearch} />
+						<CharacterList characters={filteredCharacters} />
+					</Route>
+					<Route exact patch="/prueba">
+						<Prueba />
+					</Route>
 
-			<section id="list" className="main">
-				<Filters searchName={searchName} handleSearch={handleSearch} />
-				<CharacterList characters={filteredCharacters} />
-				<Footer />
-			</section>
-		</div>
+					<Route path="/character/:id">
+						<CharacterDetail selectedCharacter={selectedCharacter} />
+					</Route>
+				</Switch>
+			</main>
+		</>
 	);
 }
 

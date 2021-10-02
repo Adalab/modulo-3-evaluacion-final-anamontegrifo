@@ -6,14 +6,14 @@ const Filters = (props) => {
 	};
 
 	return (
-		<div>
+		<>
 			<form onSubmit={handleSubmit}>
 				<FilteredByName
 					searchName={props.searchName}
 					handleSearch={props.handleSearch}
 				/>
 			</form>
-		</div>
+		</>
 	);
 };
 export default Filters;
