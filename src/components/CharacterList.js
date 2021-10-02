@@ -1,5 +1,6 @@
 import CharacterCard from './CharacterCard';
 import CharacterNotFound from './CharacterNotFound';
+import '../styles/layout/CharacterList.scss';
 
 const CharacterList = (props) => {
 	const renderCharacters = () => {
@@ -8,7 +9,7 @@ const CharacterList = (props) => {
 		} else {
 			return props.characters.map((each) => {
 				return (
-					<li key={each.id} className="">
+					<li key={each.id} className="list">
 						<CharacterCard each={each} />
 					</li>
 				);

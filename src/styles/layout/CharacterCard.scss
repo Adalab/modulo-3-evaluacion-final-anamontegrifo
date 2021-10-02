@@ -1,0 +1,17 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+.card {
+	display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;	
+		width: 200px;
+		height: 200px;
+		padding: 15px;
+		border: 1px solid $purple;
+		&__image {
+			width: 120px;
+		}
+}

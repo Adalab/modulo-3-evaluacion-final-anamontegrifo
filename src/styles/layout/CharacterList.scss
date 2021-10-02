@@ -1,0 +1,11 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 10px;
+	justify-content: center;
+	align-content: flex-start;
+	padding: 10px;
+}

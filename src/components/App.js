@@ -33,7 +33,6 @@ function App() {
 		each.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
 	);
 
-	console.log(characters);
 	return (
 		<div className="body">
 			<Header />

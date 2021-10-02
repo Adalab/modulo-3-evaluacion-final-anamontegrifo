@@ -1,5 +1,4 @@
-import Logo from '../images/red.png';
-import Arrow from '../images/ico-scroll-down.svg';
+import Logo from '../images/purple.png';
 import '../styles/layout/Header.scss';
 
 const Header = () => {
@@ -10,9 +9,9 @@ const Header = () => {
 				<img className="header__logo" src={Logo} alt="character" />
 				<p className="header__text">and friends</p>
 			</div>
-			<div header__link>
+			<div className="header__link">
 				<a href="#list">
-					<img src={Arrow} alt="arrow" />
+					<i class="header__arrow fas fa-angle-down"></i>
 				</a>
 			</div>
 		</div>

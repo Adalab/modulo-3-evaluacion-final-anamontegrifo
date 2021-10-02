@@ -6,10 +6,9 @@
 	grid-template-columns: 3fr 2fr;
 	grid-template-rows: 1fr 1fr;
 	grid-row-gap: 5px;
-	height: 50px;
-	width: 100vw;
+
 	padding: 10px;
-	background-color: $mediumBlue;
+	background-color: $blood;
 	color: $grey;
 	font-size: 12px;
 	&__name {
@@ -29,10 +28,7 @@
       color: $red;
 		}
 	}
-	@include tablet {
-	grid-template-columns:  1fr;
-	grid-template-rows: 1fr 1fr;
-	font-size: 14px;
 
-	}
+
+
 }
