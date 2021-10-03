@@ -11,7 +11,7 @@ const CharacterDetail = (props) => {
 				<p>{props.selectedCharacter.species}</p>
 			</div>
 
-			<Link to="/">
+			<Link to="/characters">
 				<button>Volver</button>
 			</Link>
 		</>

@@ -11,7 +11,7 @@ const CharacterList = (props) => {
 			return props.characters.map((each) => {
 				return (
 					<li key={each.id} className="list">
-						<Link to={`/character/${each.id}`}>
+						<Link to={`/characters/${each.id}`}>
 							<CharacterCard each={each} />
 						</Link>
 					</li>
@@ -22,7 +22,6 @@ const CharacterList = (props) => {
 
 	return (
 		<div>
-			<h1>Listado de personajes</h1>
 			<ul className="list">{renderCharacters()}</ul>
 		</div>
 	);

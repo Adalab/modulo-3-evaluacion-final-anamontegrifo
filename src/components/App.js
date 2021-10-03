@@ -1,11 +1,13 @@
 import '../styles/App.scss';
 import { useEffect, useState } from 'react';
-import { Link, Route, Switch, useRouteMatch } from 'react-router-dom';
+import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import callToApi from '../services/api';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
 import Header from './Header';
+import Hero from './Hero';
+import Footer from './Footer';
 
 function App() {
 	const [characters, setCharacters] = useState([]);
@@ -35,7 +37,7 @@ function App() {
 			each.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
 		);
 
-	const routeData = useRouteMatch('/character/:id');
+	const routeData = useRouteMatch('/characters/:id');
 	console.log(routeData);
 	const characterId = routeData !== null ? parseInt(routeData.params.id) : '';
 
@@ -44,20 +46,22 @@ function App() {
 
 	return (
 		<>
-			<Header />
-
 			<main className="main">
 				<Switch>
-					<Route path="/character/:id">
+					<Route path="/characters/:id">
 						<CharacterDetail selectedCharacter={selectedCharacter} />
 					</Route>
-					<Route exact path="/">
+					<Route exact path="/characters">
+						<Header />
 						<Filters searchName={searchName} handleSearch={handleSearch} />
 						<CharacterList characters={filteredCharacters} />
+						<Footer />
+					</Route>
+					<Route exact path="/">
+						<Hero />
 					</Route>
 				</Switch>
 			</main>
-			<footer />
 		</>
 	);
 }
