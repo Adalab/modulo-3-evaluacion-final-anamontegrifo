@@ -1,4 +1,4 @@
-import Logo from '../images/orange-logo.png';
+import Logo from '../images/red.png';
 import '../styles/layout/Header.scss';
 
 const Header = () => {
