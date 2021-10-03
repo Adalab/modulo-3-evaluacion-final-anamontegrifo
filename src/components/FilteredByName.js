@@ -4,8 +4,9 @@ const FilteredByName = (props) => {
 			<input
 				type="text"
 				name="name"
+				placeholder="Search here by name!"
 				value={props.searchName}
-				onChange={props.handleSearch}
+				onChange={props.handleSearchName}
 			/>
 		</>
 	);

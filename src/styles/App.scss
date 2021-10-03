@@ -1,18 +1,10 @@
-@import 'core/reset';
-@import 'core/variables';
-
-
-
-
-
+@import "core/reset";
+@import "core/variables";
 
 .main {
-display: grid;
-grid-template-rows: auto auto 1fr auto;
-min-height: 100vh;
-
-
-
+	display: grid;
+	grid-template-rows: auto auto 1fr auto;
+	min-height: 100vh;
 	width: 100vw;
 	background-color: $orange;
 }

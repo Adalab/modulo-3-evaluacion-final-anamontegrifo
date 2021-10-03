@@ -12,6 +12,7 @@ import Footer from './Footer';
 function App() {
 	const [characters, setCharacters] = useState([]);
 	const [searchName, setSearchName] = useState('');
+	const [searchSpecies, setSearchSpecies] = useState('all');
 
 	useEffect(() => {
 		callToApi().then((response) => {
@@ -19,9 +20,14 @@ function App() {
 		});
 	}, []);
 
-	const handleSearch = (event) => {
+	const handleSearchName = (event) => {
 		setSearchName(event.currentTarget.value);
 	};
+
+	const handleSearchSpecies = (event) => {
+		setSearchSpecies(event.currentTarget.value);
+	};
+
 	const filteredCharacters = characters
 		.sort(function (a, b) {
 			if (a.name > b.name) {
@@ -35,6 +41,9 @@ function App() {
 
 		.filter((each) =>
 			each.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
+		)
+		.filter(
+			(each) => searchSpecies === 'All' || searchSpecies === each.species
 		);
 
 	const routeData = useRouteMatch('/characters/:id');
@@ -55,7 +64,12 @@ function App() {
 					</Route>
 					<Route exact path="/characters">
 						<Header />
-						<Filters searchName={searchName} handleSearch={handleSearch} />
+						<Filters
+							searchName={searchName}
+							handleSearchName={handleSearchName}
+							searchSpecies={searchSpecies}
+							handleSearchSpecies={handleSearchSpecies}
+						/>
 						<CharacterList characters={filteredCharacters} />
 						<Footer />
 					</Route>

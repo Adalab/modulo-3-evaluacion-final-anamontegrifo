@@ -1,0 +1,10 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+.filter {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 50px;
+	background-color: $grey;
+}
