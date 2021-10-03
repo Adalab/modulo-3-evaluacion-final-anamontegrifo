@@ -1,6 +1,10 @@
 @import "core/reset";
 @import "core/variables";
 
+* {
+	font-family: $regular;
+}
+
 .main {
 	display: grid;
 	grid-template-rows: auto auto 1fr auto;

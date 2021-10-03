@@ -1,3 +1,7 @@
+//https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json
+
+//https://rickandmortyapi.com/api/character
+
 const callToApi = () => {
 	return fetch('https://rickandmortyapi.com/api/character')
 		.then((response) => response.json())

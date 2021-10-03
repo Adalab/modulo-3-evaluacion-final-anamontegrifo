@@ -12,7 +12,7 @@ import Footer from './Footer';
 function App() {
 	const [characters, setCharacters] = useState([]);
 	const [searchName, setSearchName] = useState('');
-	const [searchSpecies, setSearchSpecies] = useState('all');
+	const [searchSpecies, setSearchSpecies] = useState('All');
 
 	useEffect(() => {
 		callToApi().then((response) => {

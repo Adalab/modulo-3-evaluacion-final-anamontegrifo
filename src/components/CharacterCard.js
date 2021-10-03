@@ -5,10 +5,10 @@ const CharacterCard = (props) => {
 	return (
 		<div className="card">
 			<img className="card__image" src={props.each.image} alt="character" />
-			<p>{props.each.name}</p>
-			<p>{props.each.species}</p>
+			<p>{`Name: ${props.each.name}`}</p>
+			<p>{`Species: ${props.each.species}`}</p>
 			<Link to={`/characters/${props.each.id}`}>
-				<button>Ver detalle de producto</button>
+				<button>See more here!</button>
 			</Link>
 		</div>
 	);

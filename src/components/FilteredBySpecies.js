@@ -1,7 +1,7 @@
 const FilteredBySpecie = (props) => {
 	return (
 		<>
-			<label htmlFor="species">select by species</label>
+			<label htmlFor="species">Select by species</label>
 			<select
 				className="species"
 				name="species"
