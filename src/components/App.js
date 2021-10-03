@@ -6,7 +6,6 @@ import Filters from './Filters';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
 import Header from './Header';
-import Prueba from './Prueba';
 
 function App() {
 	const [characters, setCharacters] = useState([]);
@@ -46,21 +45,19 @@ function App() {
 	return (
 		<>
 			<Header />
+
 			<main className="main">
 				<Switch>
-					<Route exact patch="/">
-						<Filters searchName={searchName} handleSearch={handleSearch} />
-						<CharacterList characters={filteredCharacters} />
-					</Route>
-					<Route exact patch="/prueba">
-						<Prueba />
-					</Route>
-
 					<Route path="/character/:id">
 						<CharacterDetail selectedCharacter={selectedCharacter} />
 					</Route>
+					<Route exact path="/">
+						<Filters searchName={searchName} handleSearch={handleSearch} />
+						<CharacterList characters={filteredCharacters} />
+					</Route>
 				</Switch>
 			</main>
+			<footer />
 		</>
 	);
 }
