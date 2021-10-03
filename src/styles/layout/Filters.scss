@@ -1,10 +1,50 @@
-@import '../core/variables';
-@import '../core/mixins';
+@import "../core/variables";
+@import "../core/mixins";
+
 
 .filter {
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
-	height: 50px;
+	align-items: center;
+	height: 90px;
 	background-color: $grey;
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		@include tablet {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+	&__inputText {
+		border: none;
+		border-radius: 1em;
+		height: 25px;
+		width: 200px;
+		margin: 0 0 10px 0;
+		padding: 0 10px;
+		background-color: $yellow;
+
+		@include tablet {
+			margin: 0 10px 0 0;
+		}
+	}
+	&__inputSelect {
+		border: none;
+		border-radius: 1em;
+		height: 25px;
+		width: 200px;
+		padding: 0 10px;
+		background-color: $yellow;
+		color: $darkGrey;
+	
+	}
+	@include tablet {
+		justify-content: flex-start;
+		height: 60px;
+		padding: 20px;
+	}
 }

@@ -1,6 +1,5 @@
 import FilteredByName from './FilteredByName';
 import FilteredBySpecies from './FilteredBySpecies';
-
 import '../styles/layout/Filters.scss';
 
 const Filters = (props) => {
@@ -10,7 +9,7 @@ const Filters = (props) => {
 
 	return (
 		<section className="filter">
-			<form onSubmit={handleSubmit}>
+			<form className="filter__form" onSubmit={handleSubmit}>
 				<FilteredByName
 					searchName={props.searchName}
 					handleSearchName={props.handleSearchName}
