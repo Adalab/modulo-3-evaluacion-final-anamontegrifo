@@ -8,7 +8,6 @@ const Hero = () => {
 			<div>
 				<p className="hero__text">All about</p>
 				<img className="hero__logo" src={Logo} alt="character" />
-				<p className="hero__text">and friends</p>
 			</div>
 			<Link to="/characters">
 				<button className="hero__button">Start!</button>

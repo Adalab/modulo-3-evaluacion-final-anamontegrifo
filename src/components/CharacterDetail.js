@@ -5,15 +5,21 @@ const CharacterDetail = (props) => {
 	console.log(props.selectedCharacter);
 	return (
 		<>
-			<div>
-				<img className="" src={props.selectedCharacter.image} alt="profile" />
-				<p>{props.selectedCharacter.name}</p>
-				<p>{props.selectedCharacter.species}</p>
-			</div>
-
 			<Link to="/characters">
 				<button>Volver</button>
 			</Link>
+			<div className="detail">
+				<img
+					className="detail__image"
+					src={props.selectedCharacter.image}
+					alt="profile"
+				/>
+				<p>{props.selectedCharacter.name}</p>
+				<p>{props.selectedCharacter.species}</p>
+				<p>{props.selectedCharacter.origin}</p>
+				<p>{props.selectedCharacter.episode.length}</p>
+				<p>{props.selectedCharacter.status}</p>
+			</div>
 		</>
 	);
 };

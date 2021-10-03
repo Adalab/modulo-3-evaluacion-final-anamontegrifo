@@ -49,7 +49,9 @@ function App() {
 			<main className="main">
 				<Switch>
 					<Route path="/characters/:id">
+						<Header />
 						<CharacterDetail selectedCharacter={selectedCharacter} />
+						<Footer />
 					</Route>
 					<Route exact path="/characters">
 						<Header />
