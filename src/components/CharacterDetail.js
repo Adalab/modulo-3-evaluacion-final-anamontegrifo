@@ -1,9 +1,7 @@
 import '../styles/layout/CharacterDetail.scss';
-import { Link } from 'react-router-dom';
 import Question from '../images/question.png';
 import Joyful from '../images/joyful.png';
 import Coffin from '../images/coffin.png';
-import RoundButton from './RoundButton';
 
 const CharacterDetail = (props) => {
 	let statusIcon = '';
@@ -43,9 +41,6 @@ const CharacterDetail = (props) => {
 					<figcaption>{`Status: ${props.selectedCharacter.status}`}</figcaption>
 				</div>
 			</div>
-			<Link to="/characters">
-				<RoundButton className="detail__button" text="Back" />
-			</Link>
 		</section>
 	);
 };
