@@ -1,17 +1,34 @@
-@import '../core/variables';
-@import '../core/mixins';
+@import "../core/variables";
+@import "../core/mixins";
 
 .card {
 	display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-		text-align: center;	
-		width: 200px;
-		height: 200px;
-		padding: 15px;
-		border: 1px solid $wine;
-		&__image {
-			width: 120px;
-		}
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	width: 200px;
+	height: 300px;
+	padding: 15px 10px;
+	border: 3px solid $grey;
+	border-radius: 1em;
+	background-color: $orange;
+	&__image {
+		width: 130px;
+		border: 3px solid $grey;
+	}
+	&__text {
+		color: $wine;
+		font-weight: bold;
+	}
+	&__button {
+		border: none;
+		border-radius: 50%;
+		height: 75px;
+		width: 75px;
+		background-color: $yellow;
+		font-family: $special;
+		font-size: 18px;
+		color: $wine;
+	}
 }

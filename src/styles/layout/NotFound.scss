@@ -1,0 +1,12 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+.notFound {
+	text-align: center;
+	margin: 50px 15px;
+	color: $wine;
+	font-family: $special;
+	font-size: 40px;
+
+
+}

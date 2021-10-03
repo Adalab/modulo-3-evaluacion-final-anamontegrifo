@@ -1,8 +1,10 @@
+import '../styles/layout/NotFound.scss';
+
 const CharacterNotFound = () => {
 	return (
-		<div>
-			<h1>Personaje no encontrado</h1>
-		</div>
+		<li className="notFound">
+			<h1>Try again, this character does not exist!</h1>
+		</li>
 	);
 };
 export default CharacterNotFound;
