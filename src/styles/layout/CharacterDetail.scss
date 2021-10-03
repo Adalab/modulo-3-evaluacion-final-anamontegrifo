@@ -1,20 +1,53 @@
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+@import "../core/variables";
+@import "../core/mixins";
 
 .detail {
-	&__item {
-		width: 300px;
-		padding: 10px;
-		list-style: none;
-		border: 1px solid aqua;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px;
+	&__card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+	justify-content: space-between;
+	width: 280px;
+	height: 380px;
+	padding: 15px;
+	border: 3px solid $grey;
+	border-radius: 1em;
+	background-color: $orange;
 	}
 	&__image {
-		width: 100%;
+		width: 180px;
+		border: 3px solid $grey;
+	}
+	&__text {
+		color: $darkGrey;
 	}
 	&__icon {
-		background-color: black;
+		height: 20px;
+		&--container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: $yellow;
+			height: 50px;
+			width: 200px;
+			border: 1px solid $wine;
+			border-radius: 10px;		
+		}
+	}
+	&__button {
+		border: none;
+		border-radius: 50%;
+		height: 50px;
+		width: 50px;
+		background-color: $wine;
+		font-family: $special;
+		font-size: 20px;
+		color: $grey;
+		margin-top: 10px;
 	}
 }

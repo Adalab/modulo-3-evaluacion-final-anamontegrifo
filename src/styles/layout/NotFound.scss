@@ -7,6 +7,15 @@
 	color: $wine;
 	font-family: $special;
 	font-size: 40px;
-
-
+	&__button {
+		margin-top: 50px;
+		border: none;
+		border-radius: 50%;
+		height: 120px;
+		width: 120px;
+		background-color: $wine;
+		font-family: $special;
+		font-size: 40px;
+		color: $grey;
+	}
 }

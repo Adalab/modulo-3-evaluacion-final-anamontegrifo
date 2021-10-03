@@ -8,6 +8,7 @@ import CharacterDetail from './CharacterDetail';
 import Header from './Header';
 import Hero from './Hero';
 import Footer from './Footer';
+import PageNotFound from './PageNotFound';
 
 function App() {
 	const [characters, setCharacters] = useState([]);
@@ -75,6 +76,9 @@ function App() {
 					</Route>
 					<Route exact path="/">
 						<Hero />
+					</Route>
+					<Route>
+						<PageNotFound />
 					</Route>
 				</Switch>
 			</main>

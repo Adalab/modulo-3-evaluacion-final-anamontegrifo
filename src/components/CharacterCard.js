@@ -1,5 +1,6 @@
 import '../styles/layout/CharacterCard.scss';
 import { Link } from 'react-router-dom';
+import RoundButton from './RoundButton';
 
 const CharacterCard = (props) => {
 	return (
@@ -8,7 +9,7 @@ const CharacterCard = (props) => {
 			<p className="card__text">{`Name: ${props.each.name}`}</p>
 			<p className="card__text">{`Species: ${props.each.species}`}</p>
 			<Link to={`/characters/${props.each.id}`}>
-				<button className="card__button">See more here!</button>
+				<RoundButton className="card__button" text="See more here!" />
 			</Link>
 		</div>
 	);
