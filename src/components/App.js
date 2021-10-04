@@ -73,6 +73,7 @@ function App() {
 							handleSearchName={handleSearchName}
 							searchSpecies={searchSpecies}
 							handleSearchSpecies={handleSearchSpecies}
+							handleResetName={handleResetName}
 						/>
 						<CharacterList
 							handleResetName={handleResetName}

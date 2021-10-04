@@ -13,6 +13,7 @@ const Filters = (props) => {
 				<FilteredByName
 					searchName={props.searchName}
 					handleSearchName={props.handleSearchName}
+					handleResetName={props.handleResetName}
 				/>
 				<FilteredBySpecies
 					searchSpecies={props.searchSpecies}

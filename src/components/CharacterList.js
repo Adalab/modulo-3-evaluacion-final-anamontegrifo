@@ -1,7 +1,6 @@
 import CharacterCard from './CharacterCard';
 import CharacterNotFound from './CharacterNotFound';
 import '../styles/layout/CharacterList.scss';
-import { Link } from 'react-router-dom';
 
 const CharacterList = (props) => {
 	const renderCharacters = () => {
@@ -11,9 +10,7 @@ const CharacterList = (props) => {
 			return props.characters.map((each) => {
 				return (
 					<li key={each.id} className="main__list--item">
-						<Link to={`/characters/${each.id}`}>
-							<CharacterCard each={each} />
-						</Link>
+						<CharacterCard each={each} />
 					</li>
 				);
 			});

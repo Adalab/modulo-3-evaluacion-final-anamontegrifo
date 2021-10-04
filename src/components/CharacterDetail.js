@@ -1,6 +1,6 @@
 import '../styles/layout/CharacterDetail.scss';
 import IdNotFound from './IdNotFound';
-import { Link } from 'react-router-dom';
+import CrossButton from './CrossButton';
 
 const CharacterDetail = (props) => {
 	console.log(props.selectedCharacter);
@@ -21,11 +21,7 @@ const CharacterDetail = (props) => {
 		return (
 			<section className="detail">
 				<div className="detail__card">
-					<div className="detail__back">
-						<Link to="/characters">
-							<i className="fas fa-times-circle detail__back--cross"></i>
-						</Link>
-					</div>
+					<CrossButton className="detail__back" link="/characters" />
 
 					<img
 						className="detail__image"
