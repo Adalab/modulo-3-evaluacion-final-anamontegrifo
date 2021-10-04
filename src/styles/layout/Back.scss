@@ -1,20 +1,9 @@
 @import "../core/variables";
 @import "../core/mixins";
 
-.back {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 
-
-	&__button {
-		border: none;
-		border-radius: 50%;
-		height: 80px;
-		width: 80px;
-		background-color: $wine;
-		font-family: $special;
-		font-size: 34px;
-		color: $yellow;
-	}
+.detail__cross {
+	color: $wine;
+	font-size: 30px;
+	align-self: flex-end;
 }

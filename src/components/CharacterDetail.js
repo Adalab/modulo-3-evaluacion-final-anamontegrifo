@@ -2,6 +2,7 @@ import '../styles/layout/CharacterDetail.scss';
 import Question from '../images/question.png';
 import Joyful from '../images/joyful.png';
 import Coffin from '../images/coffin.png';
+import { Link } from 'react-router-dom';
 
 const CharacterDetail = (props) => {
 	let statusIcon = '';
@@ -19,6 +20,12 @@ const CharacterDetail = (props) => {
 	return (
 		<section className="detail">
 			<div className="detail__card">
+				<div className="detail__back">
+					<Link to="/characters">
+						<i className="fas fa-times-circle detail__back--cross"></i>
+					</Link>
+				</div>
+
 				<img
 					className="detail__image"
 					src={props.selectedCharacter.image}

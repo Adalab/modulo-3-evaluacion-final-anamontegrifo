@@ -5,19 +5,26 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 400px;
 	margin: 30px;
 	&__card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;	
-	justify-content: space-between;
-	width: 280px;
-	height: 400px;
-	padding: 15px;
-	border: 3px solid $grey;
-	border-radius: 1em;
-	background-color: $orange;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		width: 280px;
+		height: 440px;
+		padding: 15px;
+		border: 3px solid $grey;
+		border-radius: 1em;
+		background-color: $orange;
+	}
+	&__back {
+		align-self: flex-end;
+
+		&--cross {
+			color: $wine;
+			font-size: 30px;
+		}
 	}
 	&__image {
 		width: 180px;
@@ -35,8 +42,8 @@
 			align-items: center;
 			background-color: $yellow;
 			height: 50px;
-			width: 200px;
-			border-radius: 10px;		
+			width: 180px;
+			border-radius: 10px;
 		}
 	}
 	&__button {
