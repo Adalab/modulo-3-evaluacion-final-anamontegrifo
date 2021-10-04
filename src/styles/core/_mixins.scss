@@ -8,8 +8,14 @@
     }
 }
 
-@mixin desktop {
-    @media all and (min-width: 1200px) {
+@mixin laptop {
+    @media all and (min-width: 1024px) {
         @content;
     }
+}
+
+@mixin desktop {
+	@media all and (min-width: 1440px) {
+			@content;
+	}
 }

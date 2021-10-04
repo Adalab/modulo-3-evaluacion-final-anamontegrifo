@@ -1,18 +1,28 @@
-@import '../core/variables';
-@import '../core/mixins';
-
+@import "../core/variables";
+@import "../core/mixins";
 
 .main {
 	min-height: 80vh;
-&__list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: flex-start;
-	padding: 10px;
-	margin-bottom: 60px;
-	&--item {
-		margin: 10px;
+	&__list {
+		display: grid;
+		grid-template-columns: auto;
+		padding: 10px;
+		margin-bottom: 60px;
+		&--item {
+			margin: 10px;
+			justify-self: center;
+		}
+		@include tablet {
+			grid-template-columns: repeat(3, 1fr);
+			
+		}
+		@include laptop {
+			grid-template-columns: repeat(4, 1fr);
+
+		}
+		@include desktop {
+			grid-template-columns: repeat(5, 1fr);
+
+		}
 	}
-}
 }
