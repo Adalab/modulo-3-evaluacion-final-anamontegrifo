@@ -6,6 +6,7 @@ import Alien from '../images/ufo.png';
 
 const CharacterCard = (props) => {
 	let speciesIcon = props.each.species === 'Alien' ? Alien : Human;
+
 	return (
 		<div className="card">
 			<img className="card__image" src={props.each.image} alt="character" />
@@ -29,4 +30,5 @@ const CharacterCard = (props) => {
 		</div>
 	);
 };
+
 export default CharacterCard;

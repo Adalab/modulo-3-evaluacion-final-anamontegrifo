@@ -1,10 +1,12 @@
+import PropTypes from 'prop-types';
+
 const FilteredByName = (props) => {
 	return (
 		<div className="filter__inputT">
 			<input
 				className="filter__inputT--text"
-				type="text"
-				name="name"
+				type={props.inputType}
+				name={props.name}
 				placeholder="Search here by name!"
 				value={props.searchName}
 				onChange={props.handleSearchName}
@@ -14,5 +16,17 @@ const FilteredByName = (props) => {
 			</button>
 		</div>
 	);
+};
+
+FilteredByName.defaultProps = {
+	inputType: 'text',
+	name: 'name',
+};
+FilteredByName.propTypes = {
+	inputType: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired,
+	searchName: PropTypes.func.isRequired,
+	handleSearchName: PropTypes.func.isRequired,
+	handleResetName: PropTypes.func.isRequired,
 };
 export default FilteredByName;

@@ -11,11 +11,14 @@ const Filters = (props) => {
 		<section className="filter">
 			<form className="filter__form" onSubmit={handleSubmit}>
 				<FilteredByName
+					inputType="text"
+					name="name"
 					searchName={props.searchName}
 					handleSearchName={props.handleSearchName}
 					handleResetName={props.handleResetName}
 				/>
 				<FilteredBySpecies
+					name="species"
 					searchSpecies={props.searchSpecies}
 					handleSearchSpecies={props.handleSearchSpecies}
 				/>

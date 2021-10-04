@@ -1,9 +1,11 @@
-const FilteredBySpecie = (props) => {
+import PropTypes from 'prop-types';
+
+const FilteredBySpecies = (props) => {
 	return (
 		<>
 			<select
 				className="filter__inputSelect"
-				name="species"
+				name={props.species}
 				id="species"
 				value={props.searchSpecies}
 				onChange={props.handleSearchSpecies}
@@ -15,4 +17,12 @@ const FilteredBySpecie = (props) => {
 		</>
 	);
 };
-export default FilteredBySpecie;
+FilteredBySpecies.defaultProps = {
+	name: 'species',
+};
+FilteredBySpecies.propTypes = {
+	name: PropTypes.string.isRequired,
+	searchSpecies: PropTypes.func.isRequired,
+	handleSearchSpecies: PropTypes.func.isRequired,
+};
+export default FilteredBySpecies;
