@@ -20,7 +20,7 @@
 
 		@include tablet {
 			width: 280px;
-		height: 440px;
+			height: 440px;
 		}
 	}
 	&__back {
@@ -37,9 +37,7 @@
 	&__image {
 		width: 140px;
 		border: 3px solid $grey;
-		@include tablet {
-			width: 180px;
-		}
+
 	}
 	&__text {
 		color: $darkGrey;

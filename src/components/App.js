@@ -56,12 +56,11 @@ function App() {
 
 	return (
 		<>
-			<main className="main">
+			<section className="container">
 				<Switch>
 					<Route path="/characters/:id">
 						<Header />
 						<CharacterDetail selectedCharacter={selectedCharacter} />
-
 						<Footer />
 					</Route>
 					<Route exact path="/characters">
@@ -82,7 +81,7 @@ function App() {
 						<PageNotFound />
 					</Route>
 				</Switch>
-			</main>
+			</section>
 		</>
 	);
 }

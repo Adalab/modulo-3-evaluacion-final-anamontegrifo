@@ -1,14 +1,18 @@
 @import '../core/variables';
 @import '../core/mixins';
 
-.list {
+
+.main {
+	min-height: 80vh;
+&__list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: flex-start;
 	padding: 10px;
 	margin-bottom: 60px;
-	&__item {
+	&--item {
 		margin: 10px;
 	}
+}
 }

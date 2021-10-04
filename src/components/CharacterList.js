@@ -10,7 +10,7 @@ const CharacterList = (props) => {
 		} else {
 			return props.characters.map((each) => {
 				return (
-					<li key={each.id} className="list__item">
+					<li key={each.id} className="main__list--item">
 						<Link to={`/characters/${each.id}`}>
 							<CharacterCard each={each} />
 						</Link>
@@ -21,8 +21,8 @@ const CharacterList = (props) => {
 	};
 
 	return (
-		<div>
-			<ul className="list">{renderCharacters()}</ul>
+		<div className="main">
+			<ul className="main__list">{renderCharacters()}</ul>
 		</div>
 	);
 };
