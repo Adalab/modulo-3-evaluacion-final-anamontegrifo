@@ -5,7 +5,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 20px;
+	margin: 30px 0;
 	&__card {
 		display: flex;
 		flex-direction: column;
@@ -17,10 +17,13 @@
 		border: 3px solid $grey;
 		border-radius: 1em;
 		background-color: $orange;
-
 		@include tablet {
-			width: 280px;
-			height: 440px;
+			display: grid;
+			grid-template-columns: auto 1fr;
+			grid-template-rows: auto 1fr auto;
+			column-gap: 15px;
+			width: 540px;
+			height: 340px;
 		}
 	}
 	&__back {
@@ -29,7 +32,6 @@
 		width: 30px;
 		align-self: flex-end;
 		border-radius: 50%;
-
 		&--cross {
 			color: $wine;
 			font-size: 30px;
@@ -38,13 +40,31 @@
 			transform: translateY(-1px);
 			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 		}
+		@include tablet {
+			position: relative;
+			justify-self: right;
+			grid-column: 2;
+			grid-row: 1;
+			align-self: flex-end;
+		}
 	}
 	&__image {
 		width: 140px;
 		border: 3px solid $grey;
+		@include tablet {
+			width: 300px;
+			align-self:flex-end;
+			grid-column: 1;
+			grid-row: 1/4;
+		}
 	}
 	&__text {
 		color: $darkGrey;
+		@include tablet {
+			font-size: 20px;
+			grid-column: 2;
+			grid-row: 2;
+		}
 	}
 	&__icon {
 		font-size: 20px;
@@ -58,6 +78,12 @@
 			height: 50px;
 			width: 140px;
 			border-radius: 10px;
+			@include tablet {
+				width: 180px;
+				grid-column: 2;
+				grid-row: 3;
+				justify-self: center;
+			}
 		}
 	}
 }
