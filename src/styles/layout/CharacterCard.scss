@@ -7,8 +7,8 @@
 	align-items: center;
 	justify-content: space-between;
 	text-align: center;
-	width: 200px;
-	height: 300px;
+	width: 220px;
+	height: 320px;
 	padding: 15px 10px;
 	border: 3px solid $grey;
 	border-radius: 1em;
@@ -20,6 +20,26 @@
 	&__text {
 		color: $wine;
 		font-weight: bold;
+	}
+	&__circles {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
+	&__species {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		border-radius: 50%;
+		height: 45px;
+		width: 45px;
+		background-color: $wine;
+
+		&--icon {
+			height: 30px;
+		}
 	}
 	&__button {
 		border: none;

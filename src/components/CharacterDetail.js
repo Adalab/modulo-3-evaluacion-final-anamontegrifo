@@ -1,17 +1,15 @@
 import '../styles/layout/CharacterDetail.scss';
-import Question from '../images/question.png';
-import Joyful from '../images/joyful.png';
-import Coffin from '../images/coffin.png';
+
 import { Link } from 'react-router-dom';
 
 const CharacterDetail = (props) => {
 	let statusIcon = '';
 	if (props.selectedCharacter.status === 'Dead') {
-		statusIcon = Coffin;
+		statusIcon = 'fas fa-cross detail__icon';
 	} else if (props.selectedCharacter.status === 'Alive') {
-		statusIcon = Joyful;
+		statusIcon = 'fas fa-heart detail__icon';
 	} else {
-		statusIcon = Question;
+		statusIcon = 'fas fa-question-circle detail__icon';
 	}
 
 	let episodes =
@@ -41,8 +39,10 @@ const CharacterDetail = (props) => {
 				</p>
 
 				<div className="detail__icon--container">
-					<img className="detail__icon" src={statusIcon} alt="status" />
-					<figcaption>{`Status: ${props.selectedCharacter.status}`}</figcaption>
+					<p>
+						<i className={statusIcon}></i>
+					</p>
+					<p className="detail__text">{`Status: ${props.selectedCharacter.status}`}</p>
 				</div>
 			</div>
 		</section>
