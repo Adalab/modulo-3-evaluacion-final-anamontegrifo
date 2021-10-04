@@ -1,11 +1,11 @@
 import '../styles/layout/CharacterDetail.scss';
-import CharacterNotFound from './CharacterNotFound';
+import IdNotFound from './IdNotFound';
 import { Link } from 'react-router-dom';
 
 const CharacterDetail = (props) => {
 	console.log(props.selectedCharacter);
 	if (props.selectedCharacter === undefined) {
-		return <CharacterNotFound />;
+		return <IdNotFound />;
 	} else {
 		let episodes =
 			props.selectedCharacter.episode.length === 1 ? 'episode' : 'episodes';

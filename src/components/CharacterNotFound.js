@@ -1,5 +1,4 @@
 import '../styles/layout/NotFound.scss';
-import { Link } from 'react-router-dom';
 import RoundButton from './RoundButton';
 
 const CharacterNotFound = (props) => {
