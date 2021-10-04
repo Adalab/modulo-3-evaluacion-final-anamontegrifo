@@ -61,7 +61,7 @@ function App() {
 		<>
 			<section className="container">
 				<Switch>
-					<Route path="/characters/:id">
+					<Route exact path="/characters/:id">
 						<Header />
 						<CharacterDetail selectedCharacter={selectedCharacter} />
 						<Footer />

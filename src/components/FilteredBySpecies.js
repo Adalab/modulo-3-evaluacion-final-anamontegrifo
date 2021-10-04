@@ -22,7 +22,7 @@ FilteredBySpecies.defaultProps = {
 };
 FilteredBySpecies.propTypes = {
 	name: PropTypes.string.isRequired,
-	searchSpecies: PropTypes.func.isRequired,
+	searchSpecies: PropTypes.string.isRequired,
 	handleSearchSpecies: PropTypes.func.isRequired,
 };
 export default FilteredBySpecies;

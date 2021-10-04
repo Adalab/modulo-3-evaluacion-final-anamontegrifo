@@ -25,7 +25,7 @@ FilteredByName.defaultProps = {
 FilteredByName.propTypes = {
 	inputType: PropTypes.string.isRequired,
 	name: PropTypes.string.isRequired,
-	searchName: PropTypes.func.isRequired,
+	searchName: PropTypes.string.isRequired,
 	handleSearchName: PropTypes.func.isRequired,
 	handleResetName: PropTypes.func.isRequired,
 };
