@@ -48,7 +48,6 @@ function App() {
 		);
 
 	const routeData = useRouteMatch('/characters/:id');
-	console.log(routeData);
 	const characterId = routeData !== null ? parseInt(routeData.params.id) : '';
 
 	const selectedCharacter = characters.find((item) => item.id === characterId);
