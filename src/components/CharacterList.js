@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const CharacterList = (props) => {
 	const renderCharacters = () => {
 		if (props.characters.length === 0) {
-			return <CharacterNotFound />;
+			return <CharacterNotFound handleResetName={props.handleResetName} />;
 		} else {
 			return props.characters.map((each) => {
 				return (

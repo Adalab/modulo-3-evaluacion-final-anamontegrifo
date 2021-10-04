@@ -29,6 +29,10 @@ function App() {
 		setSearchSpecies(event.currentTarget.value);
 	};
 
+	const handleResetName = () => {
+		setSearchName('');
+	};
+
 	const filteredCharacters = characters
 		.sort(function (a, b) {
 			if (a.name > b.name) {
@@ -70,7 +74,10 @@ function App() {
 							searchSpecies={searchSpecies}
 							handleSearchSpecies={handleSearchSpecies}
 						/>
-						<CharacterList characters={filteredCharacters} />
+						<CharacterList
+							handleResetName={handleResetName}
+							characters={filteredCharacters}
+						/>
 						<Footer />
 					</Route>
 					<Route exact path="/">
