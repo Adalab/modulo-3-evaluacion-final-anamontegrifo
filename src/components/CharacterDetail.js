@@ -3,12 +3,12 @@ import IdNotFound from './IdNotFound';
 import CrossButton from './CrossButton';
 
 const CharacterDetail = (props) => {
-	console.log(props.selectedCharacter);
 	if (props.selectedCharacter === undefined) {
 		return <IdNotFound />;
 	} else {
 		let episodes =
 			props.selectedCharacter.episode.length === 1 ? 'episode' : 'episodes';
+
 		let statusIcon = '';
 		if (props.selectedCharacter.status === 'Dead') {
 			statusIcon = 'fas fa-cross detail__icon';
@@ -22,7 +22,6 @@ const CharacterDetail = (props) => {
 			<section className="detail">
 				<div className="detail__card">
 					<CrossButton className="detail__back" link="/characters" />
-
 					<img
 						className="detail__image"
 						src={props.selectedCharacter.image}

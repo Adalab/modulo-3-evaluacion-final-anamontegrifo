@@ -36,7 +36,6 @@
 		height: 45px;
 		width: 45px;
 		background-color: $wine;
-
 		&--icon {
 			height: 30px;
 		}
@@ -53,6 +52,6 @@
 		&:hover {
 			transform: translateY(-3px);
 			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-	}
+		}
 	}
 }

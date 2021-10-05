@@ -55,7 +55,6 @@ function App() {
 	const characterId = routeData !== null ? parseInt(routeData.params.id) : '';
 
 	const selectedCharacter = characters.find((item) => item.id === characterId);
-	console.log(selectedCharacter);
 
 	return (
 		<>
@@ -66,6 +65,7 @@ function App() {
 						<CharacterDetail selectedCharacter={selectedCharacter} />
 						<Footer />
 					</Route>
+
 					<Route exact path="/characters">
 						<Header />
 						<Filters
@@ -81,9 +81,11 @@ function App() {
 						/>
 						<Footer />
 					</Route>
+
 					<Route exact path="/">
 						<Hero />
 					</Route>
+
 					<Route>
 						<PageNotFound />
 					</Route>

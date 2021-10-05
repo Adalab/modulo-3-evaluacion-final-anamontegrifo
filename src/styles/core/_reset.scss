@@ -86,12 +86,12 @@ audio,
 input,
 li,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -104,61 +104,67 @@ header,
 hgroup,
 menu,
 nav,
-
 section {
-  display: block;
+	display: block;
 }
 body {
-  line-height: 1;
+	line-height: 1;
 }
 ol,
 ul {
-  list-style: none;
+	list-style: none;
 }
 blockquote,
 q {
-  quotes: none;
+	quotes: none;
 }
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+	content: "";
+	content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
-a{
-  text-decoration: none;
+a {
+	text-decoration: none;
 }
 button,
 input,
 optgroup,
 select,
-textarea,html input[type="button"],
+textarea,
+html input[type="button"],
 input[type="reset"],
-input[type="submit"],button[disabled],
-html input[disabled],button::-moz-focus-inner,
-input::-moz-focus-inner, input[type="checkbox"],
-input[type="radio"], input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button, input[type="search"], input[type="search"]::-webkit-search-cancel-button,
+input[type="submit"],
+button[disabled],
+html input[disabled],
+button::-moz-focus-inner,
+input::-moz-focus-inner,
+input[type="checkbox"],
+input[type="radio"],
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="search"],
+input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-	border:none;
-	background-image:none;
-	background-color:transparent;
+	border: none;
+	background-image: none;
+	background-color: transparent;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
 span {
 	font-weight: 700;
-	color: #B83B5E;
+	color: #b83b5e;
 }
 
 html {
-height: -webkit-fill-available;	
+	height: -webkit-fill-available;
 }
 
 body {
