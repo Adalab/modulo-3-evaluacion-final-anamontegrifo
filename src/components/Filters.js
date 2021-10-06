@@ -1,6 +1,7 @@
 import FilteredByName from './FilteredByName';
 import FilteredBySpecies from './FilteredBySpecies';
 import '../styles/layout/Filters.scss';
+import FilteredByGender from './FilteredByGender';
 
 const Filters = (props) => {
 	const handleSubmit = (event) => {
@@ -21,6 +22,11 @@ const Filters = (props) => {
 					name="species"
 					searchSpecies={props.searchSpecies}
 					handleSearchSpecies={props.handleSearchSpecies}
+				/>
+				<FilteredByGender
+					name="gender"
+					searchGender={props.searchGender}
+					handleSearchGender={props.handleSearchGender}
 				/>
 			</form>
 		</section>

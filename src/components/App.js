@@ -14,6 +14,7 @@ function App() {
 	const [characters, setCharacters] = useState([]);
 	const [searchName, setSearchName] = useState('');
 	const [searchSpecies, setSearchSpecies] = useState('All');
+	const [searchGender, setSearchGender] = useState('All');
 
 	useEffect(() => {
 		callToApi().then((response) => {
@@ -27,6 +28,10 @@ function App() {
 
 	const handleSearchSpecies = (event) => {
 		setSearchSpecies(event.currentTarget.value);
+	};
+
+	const handleSearchGender = (event) => {
+		setSearchGender(event.currentTarget.value);
 	};
 
 	const handleResetName = () => {
@@ -47,12 +52,11 @@ function App() {
 		.filter((each) =>
 			each.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
 		)
-		.filter(
-			(each) => searchSpecies === 'All' || searchSpecies === each.species
-		);
+		.filter((each) => searchSpecies === 'All' || searchSpecies === each.species)
+		.filter((each) => searchGender === 'All' || searchGender === each.gender);
 
 	const routeData = useRouteMatch('/characters/:id');
-	const characterId = routeData !== null ? parseInt(routeData.params.id) : '';
+	const characterId = routeData !== null ? routeData.params.id : '';
 
 	const selectedCharacter = characters.find((item) => item.id === characterId);
 
@@ -74,6 +78,8 @@ function App() {
 							searchSpecies={searchSpecies}
 							handleSearchSpecies={handleSearchSpecies}
 							handleResetName={handleResetName}
+							searchGender={searchGender}
+							handleSearchGender={handleSearchGender}
 						/>
 						<CharacterList
 							handleResetName={handleResetName}

@@ -12,7 +12,8 @@ const callToApi = () => {
 					origin: character.origin.name,
 					episode: character.episode,
 					status: character.status,
-					id: character.id,
+					id: character.id.toString(),
+					gender: character.gender,
 				};
 			});
 		});
