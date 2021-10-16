@@ -8,7 +8,7 @@ import CharacterDetail from './CharacterDetail';
 import Header from './Header';
 import Hero from './Hero';
 import Footer from './Footer';
-import PageNotFound from './PageNotFound';
+import NotFound from './NotFound';
 
 function App() {
 	const [characters, setCharacters] = useState([]);
@@ -92,7 +92,11 @@ function App() {
 					</Route>
 
 					<Route>
-						<PageNotFound />
+						<NotFound
+							titleText="This page does not exist!"
+							link="/"
+							btnText="Home"
+						/>
 					</Route>
 				</Switch>
 			</section>

@@ -1,10 +1,16 @@
 import '../styles/layout/CharacterDetail.scss';
-import IdNotFound from './IdNotFound';
+import NotFound from './NotFound';
 import CrossButton from './CrossButton';
 
 const CharacterDetail = (props) => {
 	if (props.selectedCharacter === undefined) {
-		return <IdNotFound />;
+		return (
+			<NotFound
+				btnText="Back"
+				titleText="Try again, this character does not exist!"
+				link="/characters"
+			/>
+		);
 	} else {
 		let episodes =
 			props.selectedCharacter.episode.length === 1 ? 'episode' : 'episodes';

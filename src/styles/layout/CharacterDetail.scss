@@ -6,6 +6,7 @@
 	flex-direction: column;
 	align-items: center;
 	margin: 30px 0;
+
 	&__card {
 		display: flex;
 		flex-direction: column;
@@ -13,10 +14,10 @@
 		justify-content: space-between;
 		width: 280px;
 		height: 340px;
-		padding: 15px;
-		border: 3px solid $grey;
+		padding: 20px;
 		border-radius: 1em;
-		background-color: $orange;
+		background-color: $yellow;
+		box-shadow: 3px 3px 5px $blood;
 		@include tablet {
 			display: grid;
 			grid-template-columns: auto 1fr;
@@ -50,7 +51,6 @@
 	}
 	&__image {
 		width: 140px;
-		border: 3px solid $grey;
 		@include tablet {
 			width: 300px;
 			align-self:flex-end;
@@ -74,7 +74,7 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			background-color: $yellow;
+			background-color: $grey;
 			height: 50px;
 			width: 140px;
 			border-radius: 10px;

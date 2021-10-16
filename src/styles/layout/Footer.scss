@@ -10,8 +10,8 @@
 	bottom: 0;
 	width: 100%;
 	padding: 10px;
-	background-color: $wine;
-	color: $grey;
+	background-color: $yellow;
+	color: $wine;
 	font-size: 12px;
 	&__name {
 		grid-column: 1;
@@ -23,7 +23,7 @@
 	}
 	&__link {
 		text-align: end;
-		color: $grey;
+		color: $wine;
 		grid-column: 2;
 		grid-row: 2;
 		&:active {

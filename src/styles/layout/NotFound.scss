@@ -5,22 +5,30 @@
 	grid-column: 1 / 6;
 	text-align: center;
 	margin: 50px 15px;
-	color: $wine;
+	color: $yellow;
 	font-family: $special;
-	font-size: 40px;
+	font-size: 30px;
 	&__button {
 		margin-top: 50px;
 		border: none;
 		border-radius: 50%;
-		height: 150px;
-		width: 150px;
-		background-color: $wine;
+		height: 100px;
+		width: 100px;
+		background-color: $yellow;
 		font-family: $special;
-		font-size: 30px;
-		color: $grey;
+		font-size: 26px;
+		color: $wine;
 		&:hover {
 			transform: translateY(-3px);
 			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+		}
+		@include tablet {
+			height: 150px;
+		width: 150px;
+		font-size: 30px;
+		}
 	}
+	@include tablet{
+		font-size: 40px;
 	}
 }
