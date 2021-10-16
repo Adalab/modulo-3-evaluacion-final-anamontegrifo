@@ -53,7 +53,7 @@
 		width: 140px;
 		@include tablet {
 			width: 300px;
-			align-self:flex-end;
+			align-self: flex-end;
 			grid-column: 1;
 			grid-row: 1/4;
 		}

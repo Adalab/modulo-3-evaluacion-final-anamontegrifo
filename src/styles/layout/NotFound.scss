@@ -24,11 +24,11 @@
 		}
 		@include tablet {
 			height: 150px;
-		width: 150px;
-		font-size: 30px;
+			width: 150px;
+			font-size: 30px;
 		}
 	}
-	@include tablet{
+	@include tablet {
 		font-size: 40px;
 	}
 }
