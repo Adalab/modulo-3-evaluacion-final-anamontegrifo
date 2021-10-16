@@ -5,19 +5,23 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 160px;
+	height: 120px;
 	background-color: $grey;
 	&__form {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items: flex-start;
-		gap: 10px;
+		align-items: center;
+		gap: 20px;
 		@include tablet {
 			flex-direction: row;
 			align-items: center;
 			justify-content: center;
 		}
+	}
+	&__select {
+		display: flex;
+		gap: 10px;
 	}
 	&__inputT {
 		display: flex;
@@ -50,14 +54,18 @@
 		border: none;
 		border-radius: 1em;
 		height: 25px;
-		width: 225px;
+		width: 90px;
 		padding: 0 10px;
 		background-color: $yellow;
 		color: $darkGrey;
+	
+		@include tablet {
+			width: 120px;
+		}
 	}
 	@include tablet {
 		justify-content: flex-start;
-		height: 120px;
+		height: 70px;
 		padding: 20px;
 	}
 }

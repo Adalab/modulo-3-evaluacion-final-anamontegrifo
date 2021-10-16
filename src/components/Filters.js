@@ -20,46 +20,48 @@ const Filters = (props) => {
 					handleReset={props.handleResetName}
 					icon="fas fa-times-circle filter__inputT--icon"
 				/>
-				<Selectx3Filter
-					name="species"
-					id="species"
-					searchSelect={props.searchSpecies}
-					handleSearchSelect={props.handleSearchSpecies}
-					option1Value="All"
-					option1Text="Choose a species"
-					option2Value="Human"
-					option2Text="Human"
-					option3Value="Alien"
-					option3Text="Alien"
-				/>
-				<Selectx4Filter
-					name="gender"
-					id="gender"
-					searchSelect={props.searchGender}
-					handleSearchSelect={props.handleSearchGender}
-					option1Value="All"
-					option1Text="Choose a gender"
-					option2Value="Male"
-					option2Text="Male"
-					option3Value="Female"
-					option3Text="Female"
-					option4Value="unknown"
-					option4Text="Unknown"
-				/>
-				<Selectx4Filter
-					name="status"
-					id="status"
-					searchSelect={props.searchStatus}
-					handleSearchSelect={props.handleSearchStatus}
-					option1Value="All"
-					option1Text="Choose a status"
-					option2Value="Alive"
-					option2Text="Alive"
-					option3Value="Dead"
-					option3Text="Dead"
-					option4Value="unknown"
-					option4Text="Unknown"
-				/>
+				<section className="filter__select">
+					<Selectx3Filter
+						name="species"
+						id="species"
+						searchSelect={props.searchSpecies}
+						handleSearchSelect={props.handleSearchSpecies}
+						option1Value="All"
+						option1Text="Species"
+						option2Value="Human"
+						option2Text="Human"
+						option3Value="Alien"
+						option3Text="Alien"
+					/>
+					<Selectx4Filter
+						name="gender"
+						id="gender"
+						searchSelect={props.searchGender}
+						handleSearchSelect={props.handleSearchGender}
+						option1Value="All"
+						option1Text="Gender"
+						option2Value="Male"
+						option2Text="Male"
+						option3Value="Female"
+						option3Text="Female"
+						option4Value="unknown"
+						option4Text="Unknown"
+					/>
+					<Selectx4Filter
+						name="status"
+						id="status"
+						searchSelect={props.searchStatus}
+						handleSearchSelect={props.handleSearchStatus}
+						option1Value="All"
+						option1Text="Status"
+						option2Value="Alive"
+						option2Text="Alive"
+						option3Value="Dead"
+						option3Text="Dead"
+						option4Value="unknown"
+						option4Text="Unknown"
+					/>
+				</section>
 			</form>
 		</section>
 	);
