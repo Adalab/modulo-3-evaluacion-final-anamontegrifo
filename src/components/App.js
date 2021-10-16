@@ -15,6 +15,7 @@ function App() {
 	const [searchName, setSearchName] = useState('');
 	const [searchSpecies, setSearchSpecies] = useState('All');
 	const [searchGender, setSearchGender] = useState('All');
+	const [searchStatus, setSearchStatus] = useState('All');
 
 	useEffect(() => {
 		callToApi().then((response) => {
@@ -34,6 +35,10 @@ function App() {
 		setSearchGender(event.currentTarget.value);
 	};
 
+	const handleSearchStatus = (event) => {
+		setSearchStatus(event.currentTarget.value);
+	};
+
 	const handleResetName = () => {
 		setSearchName('');
 	};
@@ -43,7 +48,8 @@ function App() {
 			each.name.toLocaleLowerCase().includes(searchName.toLocaleLowerCase())
 		)
 		.filter((each) => searchSpecies === 'All' || searchSpecies === each.species)
-		.filter((each) => searchGender === 'All' || searchGender === each.gender);
+		.filter((each) => searchGender === 'All' || searchGender === each.gender)
+		.filter((each) => searchStatus === 'All' || searchStatus === each.status);
 
 	const routeData = useRouteMatch('/characters/:id');
 	const characterId = routeData !== null ? routeData.params.id : '';
@@ -70,10 +76,13 @@ function App() {
 							handleResetName={handleResetName}
 							searchGender={searchGender}
 							handleSearchGender={handleSearchGender}
+							searchStatus={searchStatus}
+							handleSearchStatus={handleSearchStatus}
 						/>
 						<CharacterList
 							handleResetName={handleResetName}
 							characters={filteredCharacters}
+							searchName={searchName}
 						/>
 						<Footer />
 					</Route>

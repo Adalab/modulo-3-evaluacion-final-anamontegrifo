@@ -1,7 +1,7 @@
-import FilteredByName from './FilteredByName';
-import FilteredBySpecies from './FilteredBySpecies';
+import InputFilter from './InputFilter';
 import '../styles/layout/Filters.scss';
-import FilteredByGender from './FilteredByGender';
+import Selectx3Filter from './Selectx3Filter';
+import Selectx4Filter from './Selectx4Filter';
 
 const Filters = (props) => {
 	const handleSubmit = (event) => {
@@ -11,22 +11,54 @@ const Filters = (props) => {
 	return (
 		<section className="filter">
 			<form className="filter__form" onSubmit={handleSubmit}>
-				<FilteredByName
+				<InputFilter
 					inputType="text"
 					name="name"
-					searchName={props.searchName}
-					handleSearchName={props.handleSearchName}
-					handleResetName={props.handleResetName}
+					placeholder="Search here by name!"
+					searchWord={props.searchName}
+					handleSearchWord={props.handleSearchName}
+					handleReset={props.handleResetName}
+					icon="fas fa-times-circle filter__inputT--icon"
 				/>
-				<FilteredBySpecies
+				<Selectx3Filter
 					name="species"
-					searchSpecies={props.searchSpecies}
-					handleSearchSpecies={props.handleSearchSpecies}
+					id="species"
+					searchSelect={props.searchSpecies}
+					handleSearchSelect={props.handleSearchSpecies}
+					option1Value="All"
+					option1Text="Choose a species"
+					option2Value="Human"
+					option2Text="Human"
+					option3Value="Alien"
+					option3Text="Alien"
 				/>
-				<FilteredByGender
+				<Selectx4Filter
 					name="gender"
-					searchGender={props.searchGender}
-					handleSearchGender={props.handleSearchGender}
+					id="gender"
+					searchSelect={props.searchGender}
+					handleSearchSelect={props.handleSearchGender}
+					option1Value="All"
+					option1Text="Choose a gender"
+					option2Value="Male"
+					option2Text="Male"
+					option3Value="Female"
+					option3Text="Female"
+					option4Value="unknown"
+					option4Text="Unknown"
+				/>
+				<Selectx4Filter
+					name="status"
+					id="status"
+					searchSelect={props.searchStatus}
+					handleSearchSelect={props.handleSearchStatus}
+					option1Value="All"
+					option1Text="Choose a status"
+					option2Value="Alive"
+					option2Text="Alive"
+					option3Value="Dead"
+					option3Text="Dead"
+					option4Value="unknown"
+					option4Text="Unknown"
 				/>
 			</form>
 		</section>

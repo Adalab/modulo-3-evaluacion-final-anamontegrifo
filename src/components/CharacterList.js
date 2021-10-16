@@ -5,7 +5,12 @@ import '../styles/layout/CharacterList.scss';
 const CharacterList = (props) => {
 	const renderCharacters = () => {
 		if (props.characters.length === 0) {
-			return <CharacterNotFound handleResetName={props.handleResetName} />;
+			return (
+				<CharacterNotFound
+					searchName={props.searchName}
+					handleResetName={props.handleResetName}
+				/>
+			);
 		} else {
 			return props.characters.map((each) => {
 				return (

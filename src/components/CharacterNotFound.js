@@ -4,7 +4,7 @@ import RoundButton from './RoundButton';
 const CharacterNotFound = (props) => {
 	return (
 		<div className="notFound">
-			<h1>Try again, this character does not exist!</h1>
+			<h1>Try again, the character named {props.searchName} does not exist!</h1>
 
 			<RoundButton
 				className="notFound__button"
