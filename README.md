@@ -2,7 +2,7 @@
 
 Este es el trabajo de evaluación final de React en Adalab. Consiste en crear una web de personajes de Rick & Morty, utilizando la [Rick and Morty API](https://rickandmortyapi.com/).
 
-El proyecto está creado sobre el React Starter Kit de Adalab, y se trata de una web que nos permite consultar los personajes de la serie, realizar búsqueda y ver la información detallada de cada uno.
+El proyecto está creado sobre el React Starter Kit de Adalab, y se trata de una web que nos permite consultar los personajes de la serie, realizar búsquedas por nombre, filtrar por distintos criterios y ver la información detallada de cada uno.
 
 Esta es la apariencia de la web:
 
