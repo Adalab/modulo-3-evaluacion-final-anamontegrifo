@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const SelectFilter = (props) => {
 	return (
 		<select
@@ -13,6 +15,23 @@ const SelectFilter = (props) => {
 			<option value={props.option4Value}>{props.option4Text}</option>
 		</select>
 	);
+};
+SelectFilter.defaultProps = {
+	name: 'name',
+};
+SelectFilter.propTypes = {
+	name: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
+	searchSelect: PropTypes.string.isRequired,
+	handleSearchSelect: PropTypes.func.isRequired,
+	option1Value: PropTypes.string.isRequired,
+	option1Text: PropTypes.string.isRequired,
+	option2Value: PropTypes.string.isRequired,
+	option2Text: PropTypes.string.isRequired,
+	option3Value: PropTypes.string.isRequired,
+	option3Text: PropTypes.string.isRequired,
+	option4Value: PropTypes.string.isRequired,
+	option4Text: PropTypes.string.isRequired,
 };
 
 export default SelectFilter;

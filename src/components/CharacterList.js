@@ -1,6 +1,7 @@
 import CharacterCard from './CharacterCard';
 import CharacterNotFound from './CharacterNotFound';
 import '../styles/layout/CharacterList.scss';
+import PropTypes from 'prop-types';
 
 const CharacterList = (props) => {
 	const renderCharacters = () => {
@@ -28,4 +29,11 @@ const CharacterList = (props) => {
 		</div>
 	);
 };
+
+CharacterList.propTypes = {
+	handleResetName: PropTypes.func.isRequired,
+	characters: PropTypes.array.isRequired,
+	searchName: PropTypes.string.isRequired,
+};
+
 export default CharacterList;

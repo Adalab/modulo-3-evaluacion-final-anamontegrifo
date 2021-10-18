@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const CrossButton = (props) => {
 	return (
@@ -8,5 +9,15 @@ const CrossButton = (props) => {
 			</Link>
 		</div>
 	);
+};
+
+CrossButton.defaultProps = {
+	className: 'detail__back',
+	link: '/characters',
+};
+
+CrossButton.propTypes = {
+	className: PropTypes.string,
+	link: PropTypes.string,
 };
 export default CrossButton;

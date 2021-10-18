@@ -1,5 +1,6 @@
 import '../styles/layout/NotFound.scss';
 import RoundButton from './RoundButton';
+import PropTypes from 'prop-types';
 
 const CharacterNotFound = (props) => {
 	return (
@@ -13,5 +14,10 @@ const CharacterNotFound = (props) => {
 			/>
 		</div>
 	);
+};
+
+CharacterNotFound.propTypes = {
+	searchName: PropTypes.string.isRequired,
+	handleResetName: PropTypes.func,
 };
 export default CharacterNotFound;

@@ -1,5 +1,6 @@
 import '../styles/layout/CharacterCard.scss';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import RoundButton from './RoundButton';
 import Human from '../images/human-mind.png';
 import Alien from '../images/ufo.png';
@@ -29,6 +30,10 @@ const CharacterCard = (props) => {
 			</section>
 		</div>
 	);
+};
+
+CharacterCard.propTypes = {
+	each: PropTypes.object.isRequired,
 };
 
 export default CharacterCard;

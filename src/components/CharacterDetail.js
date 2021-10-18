@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '../styles/layout/CharacterDetail.scss';
 import NotFound from './NotFound';
 import CrossButton from './CrossButton';
@@ -52,6 +53,10 @@ const CharacterDetail = (props) => {
 			</section>
 		);
 	}
+};
+
+CharacterDetail.propTypes = {
+	selectedCharacter: PropTypes.object,
 };
 
 export default CharacterDetail;

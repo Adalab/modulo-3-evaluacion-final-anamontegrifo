@@ -21,12 +21,15 @@ const InputFilter = (props) => {
 InputFilter.defaultProps = {
 	inputType: 'text',
 	name: 'name',
+	placeholder: '',
 };
 InputFilter.propTypes = {
 	inputType: PropTypes.string.isRequired,
 	name: PropTypes.string.isRequired,
+	placeholder: PropTypes.string,
 	searchWord: PropTypes.string.isRequired,
 	handleSearchWord: PropTypes.func.isRequired,
 	handleReset: PropTypes.func.isRequired,
+	icon: PropTypes.string,
 };
 export default InputFilter;
