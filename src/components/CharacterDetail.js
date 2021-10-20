@@ -34,14 +34,7 @@ const CharacterDetail = (props) => {
 		} else {
 			genderIcon = Unknown;
 		}
-		// let statusIcon = '';
-		// if (props.selectedCharacter.status === 'Dead') {
-		// 	statusIcon = 'fas fa-cross detail__icon';
-		// } else if (props.selectedCharacter.status === 'Alive') {
-		// 	statusIcon = 'fas fa-heart detail__icon';
-		// } else {
-		// 	statusIcon = 'fas fa-question-circle detail__icon';
-		// }
+
 		let statusIcon;
 		if (props.selectedCharacter.status === 'Alive') {
 			statusIcon = Alive;
@@ -92,12 +85,6 @@ const CharacterDetail = (props) => {
 							/>
 						</div>
 					</section>
-					{/* <div className="detail__icon--container">
-						<p>
-							<i className={statusIcon}></i>
-						</p>
-						<p className="detail__text">{`Status: ${props.selectedCharacter.status}`}</p>
-					</div> */}
 				</div>
 			</section>
 		);
