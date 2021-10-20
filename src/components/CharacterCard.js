@@ -35,18 +35,14 @@ const CharacterCard = (props) => {
 		<div className="card">
 			<img className="card__image" src={props.each.image} alt="character" />
 			<section className="card__circles">
-				<div className="card__species">
-					<img
-						className="card__species--icon"
-						src={speciesIcon}
-						alt="species"
-					/>
+				<div className="card__select">
+					<img className="card__select--icon" src={speciesIcon} alt="species" />
 				</div>
-				<div className="card__species">
-					<img className="card__species--icon" src={genderIcon} alt="gender" />
+				<div className="card__select">
+					<img className="card__select--icon" src={genderIcon} alt="gender" />
 				</div>
-				<div className="card__species">
-					<img className="card__species--icon" src={statusIcon} alt="gender" />
+				<div className="card__select">
+					<img className="card__select--icon" src={statusIcon} alt="gender" />
 				</div>
 			</section>
 			<div className="card__paragraphs">
