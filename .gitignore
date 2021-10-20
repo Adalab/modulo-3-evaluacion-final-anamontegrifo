@@ -6,12 +6,10 @@
 .pnp.js
 /web/node_modules
 /web/public
+public
 
 # testing
 /coverage
-
-# production
-/build
 
 # misc
 .DS_Store
