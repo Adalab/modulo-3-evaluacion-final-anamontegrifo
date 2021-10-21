@@ -50,7 +50,9 @@
 		}
 	}
 	&__image {
-		width: 160px;
+		width: 170px;
+		border-radius: 1em;
+		margin-top: 15px;
 		@include tablet {
 			width: 300px;
 			align-self: flex-end;
