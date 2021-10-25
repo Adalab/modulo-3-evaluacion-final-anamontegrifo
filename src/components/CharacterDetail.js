@@ -56,7 +56,7 @@ const CharacterDetail = (props) => {
 					<p className="detail__text">
 						Hi, my name is <span>{props.selectedCharacter.name}</span>. I'm just
 						an ordinary <span>{props.selectedCharacter.species}</span>. My
-						origin is <span>{props.selectedCharacter.origin}</span>. I am a
+						origin is <span>{props.selectedCharacter.origin}</span>. I'm a
 						celebrity because I appeared in
 						<span>{` ${props.selectedCharacter.episode.length} ${episodes}`}</span>{' '}
 						of Rick & Morty.
