@@ -9,7 +9,7 @@ const Footer = () => {
 				className="footer__link"
 				target="_blank"
 				rel="noreferrer"
-				href="https://github.com/Adalab/modulo-3-evaluacion-final-anamontegrifo"
+				href="anamontegrifo.github.io/buscador-rick-morty/"
 			>
 				Repo en Github <i className="fab fa-github-alt"></i>
 			</a>
